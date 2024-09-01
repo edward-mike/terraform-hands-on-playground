@@ -2,6 +2,10 @@
 
 Welcome to my Terraform Learning Repository! 🎉 This space showcases all the exercises and projects I've completed on my journey to mastering Terraform.
 
+## IaC Diagram
+
+![Alt text](diagram.png)
+
 ## Contents
 
 - **Exercises**: Hands-on practice to grasp Terraform basics.
