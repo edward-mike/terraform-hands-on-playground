@@ -9,3 +9,4 @@
 *.hcl.*
 *.backup
 .terraform/
+.terraform.lock.hcl
