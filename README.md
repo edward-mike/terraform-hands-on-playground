@@ -4,11 +4,11 @@ Welcome to my Terraform Learning Repository! 🎉 This space showcases all the e
 
 ## IaC Diagram
 
-![How IaC works](diagram.png)
+![How IaC works](snippets/diagram.png)
 
 ## Benefits of IaC
 
-![Benefits of IaC](benefits-of-iac.png)
+![Benefits of IaC](snippets/benefits-of-iac.png)
 
 ## Contents
 
