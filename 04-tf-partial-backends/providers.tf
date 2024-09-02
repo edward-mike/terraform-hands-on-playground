@@ -17,6 +17,11 @@ terraform {
     }
   }
 
+  # tf state backend configuration with s3
+  backend "s3" {
+    
+  }
+
 }
 
 

@@ -1,0 +1,3 @@
+terraform init -backend-config="dev.s3.tfbackend"
+
+terraform init -backend-config=variable_name=value

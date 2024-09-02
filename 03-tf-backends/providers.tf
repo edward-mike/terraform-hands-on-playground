@@ -17,6 +17,13 @@ terraform {
     }
   }
 
+  # tf state backend configuration with s3
+  backend "s3" {
+    bucket = "tf-course-bucket-1"
+    key    = "03-tf-state/state.tfstate"
+    region = "us-east-1"
+  }
+
 }
 
 
