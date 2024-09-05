@@ -22,6 +22,21 @@ output "ubuntu_ami_data" {
 
 
 
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity
+data "aws_caller_identity" "current" {}
+
+output "aws_caller_identity" {
+  value = data.aws_caller_identity.current
+}
+
+# current awws region for this tf infrastructure
+data "aws_region" "current" {}
+
+output "aws_region" {
+  value = data.aws_region.current
+}
+
+
 # resource "aws_instance" "web" {
 #   #   ami                         = "ami-0001da16c715d3db0"
 #   ami                         = "ami-0f898b18b2d7f60ec" # nginx ami
