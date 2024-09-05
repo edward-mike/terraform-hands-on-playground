@@ -49,6 +49,14 @@ output "current_vpc" {
   value = data.aws_vpc.current_vpc
 }
 
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones
+data "aws_availability_zones" "az" {
+  state = "available"
+}
+
+output "az" {
+  value = data.aws_availability_zones.az.names
+}
 
 # resource "aws_instance" "web" {
 #   #   ami                         = "ami-0001da16c715d3db0"
