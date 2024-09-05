@@ -37,6 +37,19 @@ output "aws_region" {
 }
 
 
+# access vpc information for this tf infrastructure
+data "aws_vpc" "current_vpc" {
+  # use Tag to filter vpc
+  tags = {
+    Name = "my-demo-vpc"
+  }
+}
+
+output "current_vpc" {
+  value = data.aws_vpc.current_vpc
+}
+
+
 # resource "aws_instance" "web" {
 #   #   ami                         = "ami-0001da16c715d3db0"
 #   ami                         = "ami-0f898b18b2d7f60ec" # nginx ami
