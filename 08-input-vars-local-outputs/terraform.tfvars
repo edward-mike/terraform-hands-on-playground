@@ -5,5 +5,5 @@ ec2_instance_configuration = {
   type = "gp2"
 }
 additional_tags = {
-  ValuesFrom = "prod.terraform.tfvar"
+  ValuesFrom = "terraform.tfvar"
 }

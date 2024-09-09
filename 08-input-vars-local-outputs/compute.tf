@@ -28,7 +28,8 @@ resource "aws_instance" "ec2" {
   }
 
   tags = merge(var.additional_tags, {
-    ManagedBy = "Terraform"
+    ManagedBy = local.managed_by
+    CostCenter = local.config_tags.cost_center
   })
 
 }
