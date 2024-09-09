@@ -1,3 +1,5 @@
 # Alternative way of passing variables.
 
 terraform apply -var aws_region="us-east-1"
+
+terraform plan -var-file="dev.terraform.tfvars"

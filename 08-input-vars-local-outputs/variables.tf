@@ -5,17 +5,17 @@
 # }
 
 
-# variable "ec2_instance_type" {
-#   type        = string
-#   description = "The type of the instance. either t2.micro or t3.micro"
+variable "ec2_instance_type" {
+  type        = string
+  description = "The type of the instance. either t2.micro or t3.micro"
 
-#   #   Adding validation for the instance type
-#   validation {
-#     condition     = var.ec2_instance_type == "t2.micro" || var.ec2_instance_type == "t3.micro"
-#     error_message = "Only supports t2.micro and t3.micro"
-#   }
+  #   Adding validation for the instance type
+  validation {
+    condition     = var.ec2_instance_type == "t2.micro" || var.ec2_instance_type == "t3.micro"
+    error_message = "Only supports t2.micro and t3.micro"
+  }
 
-# }
+}
 
 # variable "ec2_volume_size" {
 #   type        = number
