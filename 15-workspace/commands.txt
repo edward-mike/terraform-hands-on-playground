@@ -1,0 +1,36 @@
+> terraform workspace --help     # information on workspace.
+
+> terraform workspace new <workspace_name>
+
+> terraform workspace select <workspace_name>
+
+> terraform workspace show # check your current working workspace
+
+> terraform workspace delete <workspace_name>
+
+
+
+> export TF_WORKSPACE = <workspace_name>   # taken precedence over `terraform workspace select <workspace_name>`
+                                        This is useful for CI/CD environments.
+
+> unset TF_WORKSPACE                       # to unset it, before using terraform workspace select <workspace_name> 
+
+
+################################################################
+
+
+dynamically uses the current Terraform workspace's name to specify a corresponding variable file 
+(e.g., dev.tfvars, prod.tfvars, etc.) when applying the configuration.
+> terraform apply -var-file=$(terraform workspace show).tfvars 
+
+   + terraform apply -auto-approve -var-file=$(terraform workspace show).tfvars
+
+# Note to avoid typing this long command - use alias.
+> alias tfapply='terraform apply -var-file=$(terraform workspace show).tfvars'
+
+useage: tfapply
+
+
+
+# remove them.
+> terraform destroy -var-file=$(terraform workspace show).tfvars 
